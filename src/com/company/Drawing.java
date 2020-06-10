@@ -20,7 +20,7 @@ public class Drawing {
     }
 
     Drawing(){
-        System.out.println("Ты идиот?");
+        System.out.println("Я больше не играю в майкрафт");
     }
 
     public void print(){
