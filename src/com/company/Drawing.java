@@ -84,5 +84,19 @@ public class Drawing {
         //}
     //}
 
+    public void draw(int x, int y, Drawing d){
+        int countx = -1;
+        int county = -1;
+
+        for(int dx = x; dx < this.table.length - 1; dx++){
+            countx++;
+            for(int dy = y; dy < this.table[0].length - 1; dy++){
+                county++;
+                this.table[dx][dy] = d.table[countx][county];
+            }
+            countx = -1;
+            county = -1;
+        }
+    }
 
 }
