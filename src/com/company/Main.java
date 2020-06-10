@@ -25,5 +25,9 @@ public class Main {
         //System.out.println(Regex.commafix("Это строка , у которой зачем-то написаны два пробела перед запятой"));
         //System.out.println(Regex.partReplace("Какая-то сине-зеленовая трава"));
 
+        //Time utro = new Time(9,40);
+        //utro.add(20);
+        //utro.show();
+
     }
 }
