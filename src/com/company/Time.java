@@ -15,7 +15,11 @@ public class Time {
     }
 
     public void show(){
-        System.out.println((this.hours + ":" + this.minutes));
+        if (this.minutes < 10){
+            System.out.println(this.hours + ":0" + this.minutes);
+        }else {
+            System.out.println((this.hours + ":" + this.minutes));
+        }
     }
 
     public boolean isMorning(){
@@ -30,13 +34,13 @@ public class Time {
         return(this.hours >= 21);
     }
 
-    public String sayHello(){
+    public void sayHello(){
         if (isMorning()){
-            return ("Доброе утро");
+            System.out.println("Доброе утро");
         }else if(isDay()){
-            return ("Добрый день");
+            System.out.println("Добрый день");
         }else{
-            return ("Доброй ночи");
+            System.out.println("Доброй ночи");
         }
     }
 
