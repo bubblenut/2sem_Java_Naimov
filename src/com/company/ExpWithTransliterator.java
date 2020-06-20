@@ -10,17 +10,17 @@ public class ExpWithTransliterator {
 //Создаем транслитератор на основе двух массивов одинаковой длины.
 
         Transliterator t = new Transliterator(rus, eng);
-        //System.out.println(t.translateOneSymbol('я')); // ia
-        //System.out.println(t.translateOneSymbol('$')); // $
-        //System.out.println(t.translate("экзамен")); // ekzamen
-        //System.out.println(t.translate("моё имя")); // ilia
+        System.out.println(t.translateOneSymbol('я')); // ia
+        System.out.println(t.translateOneSymbol('$')); // $
+        System.out.println(t.translate("экзамен")); // ekzamen
+        System.out.println(t.translate("моё имя")); // ilia
 
 
-        //Transliterator secondt = new Transliterator(nums, texts);
-        //System.out.println(secondt.translateOneSymbol('1'));
-        //System.out.println(secondt.translateOneSymbol('$'));
-        //System.out.println(secondt.translate("1 4 8 8"));
-        //System.out.println(secondt.translate("моё имя"));
+        Transliterator secondt = new Transliterator(nums, texts);
+        System.out.println(secondt.translateOneSymbol('1'));
+        System.out.println(secondt.translateOneSymbol('$'));
+        System.out.println(secondt.translate("1 4 8 8"));
+        System.out.println(secondt.translate("моё имя"));
 
         System.out.println(t.translateOneSymbol('Р')); // R
         System.out.println(t.translateOneSymbol('Я')); // Ia
