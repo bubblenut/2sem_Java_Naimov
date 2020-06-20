@@ -2,8 +2,8 @@ package com.company;
 
 public class Transliterator {
 
-    char[] rus = new char[]{'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я'};
-    String[] eng = new String[]{"a", "b", "v", "g", "d", "e", "e", "zh", "z", "i", "i", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u", "f", "kh", "ts", "ch", "sh", "shch", "ie", "y", "", "e", "iu", "ia"};
+    private char[] rus;
+    private String[] eng;
 
     Transliterator (char[] rus, String[] eng){
         this.rus = rus;
@@ -44,5 +44,10 @@ public class Transliterator {
         return res;
     }
 
+    static Transliterator createICAO_DOC_9303(){
+        char[] rusICAODOC9303 = new char[]{'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я'};
+        String[] engICAODOC9303 = new String[]{"a", "b", "v", "g", "d", "e", "e", "zh", "z", "i", "i", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u", "f", "kh", "ts", "ch", "sh", "shch", "ie", "y", "-", "e", "iu", "ia"};
+        return new Transliterator(rusICAODOC9303, engICAODOC9303);
+    }
 
 }
