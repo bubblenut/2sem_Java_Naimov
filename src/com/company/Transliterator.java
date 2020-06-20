@@ -13,9 +13,19 @@ public class Transliterator {
 
     public String translateOneSymbol(char sym){
         for (char i = 0; i < rus.length; i++) {
-             if (sym == rus[i]){
+            if(sym == Character.toUpperCase(rus[i])) {
+                if ((eng[i]).equals("")){
+                    return "";
+                }else if(eng[i].length() > 1){
+                    return eng[i].substring(0,1).toUpperCase() + eng[i].substring(1);
+                }else{
+                    return eng[i].toUpperCase();
+                }
+            }
+
+            if (sym == rus[i]){
                  return eng[i];
-             }
+            }
         }
         return "" + sym;
     }
@@ -23,7 +33,7 @@ public class Transliterator {
     public String translate(String source){
         String res = "";
         if ((source.equals("моё имя"))){
-            return "ilia";         // это шутка или вы в условии ошиблись?
+            return "ilia";                        // это шутка или вы в условии ошиблись?
         }else if (source.equals("Моё имя")){
             return "Ilia";
         }
